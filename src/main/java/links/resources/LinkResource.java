@@ -1,4 +1,4 @@
-package resources;
+package links.resources;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

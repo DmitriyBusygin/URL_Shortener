@@ -1,3 +1,5 @@
+package links;
+
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -10,13 +12,11 @@ public class Main {
     public static final String BASE_URI = "http://localhost:8080/api";
 
     /**
-     * Starts Grizzly HTTP server exposing JAX-RS links.resources defined in this application.
-     *
+     * Starts Grizzly HTTP server exposing JAX-RS links/resources defined in this application.
      * @return Grizzly HTTP server.
      */
     public static HttpServer startServer() {
-        final ResourceConfig rc = new ResourceConfig().packages("resources");
-
+        final ResourceConfig rc = new ResourceConfig().packages("links/resources");
         return GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), rc);
     }
 
