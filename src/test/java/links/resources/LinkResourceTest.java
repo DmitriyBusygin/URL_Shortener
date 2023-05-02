@@ -1,6 +1,6 @@
 package links.resources;
 
-import links.Main;
+import links.LocalRun;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.junit.After;
 import org.junit.Before;
@@ -22,14 +22,14 @@ public class LinkResourceTest {
     private WebTarget target;
 
     @Before
-    public void setUp() throws Exception {
-        server = Main.startServer();
+    public void setUp() {
+        server = LocalRun.startServer();
         final Client c = ClientBuilder.newClient();
-        target = c.target(Main.BASE_URI);
+        target = c.target(LocalRun.BASE_URI);
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
         server.shutdownNow();
     }
 

@@ -7,6 +7,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+// my.site.com/api/links
 @Path("links")
 public class LinkResource {
 
